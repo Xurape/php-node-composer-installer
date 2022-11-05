@@ -21,11 +21,8 @@ wget -qO- https://raw.githubusercontent.com/Xurape/php-node-composer-installer/m
 If the code above doesn't work, try using the one below:
 
 ```sh
-# Download the file and make it an executable
-wget https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh | chmod +x ./install.sh
-
-# Start the installer
-./install.sh
+# Download the file and make it an executable and start it
+wget https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh && chmod +x ./install.sh && ./install.sh
 ```
 
 ## Licensing
