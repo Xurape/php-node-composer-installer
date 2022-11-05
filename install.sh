@@ -155,7 +155,7 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
 
     redMessage "\n\n-- Installation details in 2 seconds.. --"
 
-    sleep(2)
+    sleep 2
 
     echo ""
     echo ""
