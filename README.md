@@ -17,6 +17,17 @@ To install the script, simply run the following command (considering you have wg
 ```sh
 wget -qO- https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh | bash
 ```
+
+If the code above doesn't work, try using the one below:
+
+```sh
+# Download the file and make it an executable
+root@xuap:~# wget https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh | chmod +x ./install.sh
+
+# Start the installer
+root@xuap:~# ./install.sh
+```
+
 ## Licensing
 Check the license for this script [here](./LICENSE)
 
