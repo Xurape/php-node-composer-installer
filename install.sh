@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Vars
-cmd1=$(node --version)
-cmd2=$(npm --version)
-cmd3=$(composer --version)
-cmd4=$(php -v)
-
 # Colors
 BOLD="$(tput bold 2>/dev/null || echo '')"
 GREY="$(tput setaf 0 2>/dev/null || echo '')"
@@ -135,6 +129,10 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     # Install node 18 & npm 8
     nvm install 18.0.0
 
+    # Check installed versions
+    cmd1=$(node --version)
+    cmd2=$(npm --version)
+
     greenMessage "\nNode ($cmd1) and NPM ($cmd2) sucessfully installed!\n"
 
     yellowMessage "\nInstalling composer...\n"
@@ -151,11 +149,17 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
 
     sudo mv composer.phar /usr/local/bin/composer
 
+    # Check composer version
+    cmd3=$(composer --version)
+
     greenMessage "\nComposer ($cmd3) sucessfully installed!\n"
 
     redMessage "\n\n-- Installation details in 2 seconds.. --"
 
     sleep 2
+
+    # Check php version
+    cmd4=$(php -v)
 
     echo ""
     echo ""
@@ -182,7 +186,7 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     echo ""
     echo ""
     greenMessage "               Liked it? Give me star :D"
-    redMessage "      https://github.com/xurape/debian-phpnpm-installer"
+    redMessage   "  https://github.com/xurape/php-node-composer-installer"
     echo ""
     exit 1
 else
