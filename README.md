@@ -22,10 +22,10 @@ If the code above doesn't work, try using the one below:
 
 ```sh
 # Download the file and make it an executable
-root@xuap:~# wget https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh | chmod +x ./install.sh
+wget https://raw.githubusercontent.com/Xurape/php-node-composer-installer/main/install.sh | chmod +x ./install.sh
 
 # Start the installer
-root@xuap:~# ./install.sh
+./install.sh
 ```
 
 ## Licensing
