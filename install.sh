@@ -74,12 +74,6 @@ else
     sudo apt-get install curl
 fi
 
-if [ "$(dpkg -l | awk '/gpg/ {print }' | wc -l)" -ge 1 ]; then
-    greenMessage "> GNUPG2: OK"
-else
-    sudo apt-get install gnupg2
-fi
-
 # Get confirmation
 magentaMessage "Do you wish to continue? [Y/n]\n"
 read answer
@@ -88,6 +82,7 @@ read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
     clear
 
+    sudo apt-get install gnupg2
     ## Start downloading necessary packages
     sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common
 
